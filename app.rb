@@ -18,7 +18,7 @@ post("/vehicle") do
   erb(:index)
 end
 
-get('/vehicles/:id') do
+get("/vehicles/:id") do
   @vehicle = Vehicle.find(params.fetch("id"))
   erb(:vehicle)
 end

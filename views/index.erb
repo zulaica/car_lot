@@ -1,23 +1,15 @@
-<h1>Vehicles</h1>
+<h1>Dealerships</h1>
 
-<h3>Add a vehicle here:</h3>
+<h3>Add a dealership here:</h3>
 
-<form action="/vehicle" method="post">
-  <label for="make">Vehicle's make:</label>
-  <input id="make" name="make" type="text">
-
-  <label for="model">Vehicle's model:</label>
-  <input id="model" name="model" type="text">
-
-  <label for="year">Vehicle's year:</label>
-  <input id="year" name="year" type="text">
-
-  <button type="submit">Add Vehicle</button>
+<form action="/dealership" method="post">
+  <label for="name">Dealership's name:</label>
+  <input id="name" name="name" type="text">
+  <button type="submit">Add Dealership</button>
 </form>
 
-<h3>Here are the vehicles on this lot:</h3>
 <ul>
-    <% @vehicles.each() do |vehicle| %>
-    <li><a href="/vehicles/<%= vehicle.id() %>"><%= vehicle.model() %></a></li>
+    <% @dealerships.each() do |dealership| %>
+    <li><a href="/dealership/<%= dealership.id() %>"><%= dealership.name() %></a></li>
     <% end %>
 </ul>

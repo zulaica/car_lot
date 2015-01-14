@@ -1,6 +1,7 @@
 require('rspec')
 require('car_lot')
 
+
 describe(Vehicle) do
   before() do
     Vehicle.clear()
